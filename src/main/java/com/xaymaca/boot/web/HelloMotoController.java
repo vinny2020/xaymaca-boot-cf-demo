@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloMotoController {
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String helloW(Model model) {
         model.addAttribute("name", "Moto");
         return "hello";
