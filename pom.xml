@@ -25,6 +25,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,6 +47,24 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.cloudfoundry</groupId>
+				<artifactId>cf-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<configuration>
+					<server>cf-xaymaca</server>
+					<target>http://api.run.pivotal.io</target>
+					<org>xaymaca-studios</org>
+					<space>staging</space>
+					<appname>devnexus</appname>
+					<url>xaymaca-staging.cfapps.io</url>
+					<memory>1024</memory>
+					<diskQuota>1024</diskQuota>
+					<healthCheckTimeout>180</healthCheckTimeout>
+					<instances>1</instances>
+					<mergeEnv>true</mergeEnv>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
