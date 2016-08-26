@@ -1,5 +1,7 @@
 ---
 applications:
-- name: cf-xaymaca
+- name: xaymaca-boot-cf-demo
   memory: 512M
   host: cf-xaymaca
+  buildpack:  java_buildpack
+  path: target/xaymaca-boot-cf-demo.jar
