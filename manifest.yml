@@ -1,0 +1,5 @@
+---
+applications:
+- name: cf-xaymaca
+  memory: 512M
+  host: cf-xaymaca
