@@ -2,13 +2,7 @@ language: java
 jdk:
 - oraclejdk8
 deploy:
-  provider: cloudfoundry
-  edge: true
-  api: https://api.run.pivotal.io
-  username: xaymaca@gmail.com
-  password:
-    secure: "zwyBxLbZcMgUOiDds84a7Fk3fIk377mYGwaw9hlEqXKna/EKOsiIBVEQhHpjTWHfh/QqcWee2HwvDV6jJl5dQ86uIgRMmkti45DYedgunv4l8q6v2SXH/WlkvjXlNcq6nP9Abd2SE0WvFkmpdBdALyn/tZHl3NwaqOAmzWH8WCrs1SmodrEht7nWSBKpFx23vlDl9f8QrmGt3x8ZvCau5p3Rci4xavK8/SYauw/XNQZbvptuicaNC6NQRrr28Twrd95kofULRJ/gJIPT+nEWCmhxQbaTYGUIz4SKwRmMsvu6lx7Xye5oXWx85IIfF3Gl9YALOk98+aSGL/95Np1ox28p2wwczDvISDiVM+sUck1kjGnxPaLGznOvsMioS79lDPaTuqaxUe8MQ/X16e1GRR3N+0Qeez4oog5TNtconUlHe/L9j4YbxAbbnZ+B1x0SOZusa/EQu1surVcm2C6fs0ClDbn2KGwgyqeoaa0XZUffM8Qery5MiXoaRwqSzHmCXb9M1Dwm5wHAPSS5cBgjmqqKn2rehvZQRYPUngWlx7+bQBWBVapFqpULhgrw5rZfGQG7kXEwqlxFGl51dLr6JRC5glsoPKURGYbM0yePuKS/0vGHc9KDY4I5xWmQeQTpNTw74irj6eTNkjNGadDKQ/pIj4j095FIU3Y9aspEnGw="
-  organization: xaymaca-studios
-  space: staging
+  provider: script
+  script: scripts/push_no_start.sh
   on:
     repo: vinny2020/xaymaca-boot-cf-demo
