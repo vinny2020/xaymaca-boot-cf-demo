@@ -3,6 +3,7 @@ jdk:
 - oraclejdk8
 deploy:
   provider: script
+  edge: true
   script: scripts/push_no_start.sh
   on:
     repo: vinny2020/xaymaca-boot-cf-demo
