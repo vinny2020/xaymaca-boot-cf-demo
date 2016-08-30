@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
+#!/bin/bash
 cf push --no-start  -p target/xaymaca-boot-cf-demo.jar
